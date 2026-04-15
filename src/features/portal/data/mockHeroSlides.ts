@@ -7,7 +7,7 @@ export const MOCK_HERO_SLIDES: HeroSlide[] = [
     title: 'UNREAL',
     titleAccent: 'ADVENTURE',
     description: "Experience the world's most advanced 3D amusement park. Cinematic rides, heart-pumping thrills, and unforgettable memories.",
-    image: '/dream.png', // A rollercoaster/park image
+    image: '/Dream_park_4.jpg', // A rollercoaster/park image
     buttons: [
       { label: 'dream', href: '/magic', variant: 'primary' },
       { label: 'park', href: '/portal', variant: 'secondary' }
