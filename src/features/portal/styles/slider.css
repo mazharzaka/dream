@@ -3,6 +3,12 @@
   bottom: 40px !important;
 }
 
+@media (min-width: 1536px) {
+  .swiper-pagination-bullets {
+    bottom: 5vh !important;
+  }
+}
+
 .swiper-pagination-bullet {
   width: 12px;
   height: 6px;
@@ -45,6 +51,15 @@
 
 .slider-nav-prev { left: 40px; }
 .slider-nav-next { right: 40px; }
+
+@media (min-width: 1536px) {
+  .slider-nav-prev { left: 4vw; }
+  .slider-nav-next { right: 4vw; }
+  .slider-nav-btn {
+    width: 80px;
+    height: 80px;
+  }
+}
 
 @media (max-width: 768px) {
   .slider-nav-btn { display: none; }

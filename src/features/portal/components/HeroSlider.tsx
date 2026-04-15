@@ -29,12 +29,12 @@ export function HeroSlider() {
         modules={[Autoplay, Navigation, Pagination, EffectFade]}
         effect="fade"
         speed={1000}
-        autoplay={{
-          delay: 6000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 6000,
+        //   disableOnInteraction: false,
+        // }}
         loop={true}
-        pagination={{ 
+        pagination={{
           clickable: true,
           bulletClass: 'swiper-pagination-bullet',
           bulletActiveClass: 'swiper-pagination-bullet-active',

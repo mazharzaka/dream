@@ -34,7 +34,7 @@ export function SlideContent({ slide, isActive }: SlideContentProps) {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-start text-left px-8 md:px-24">
+    <div className="relative w-full h-full flex items-center justify-start text-left px-8 md:px-24 lg:px-32 2xl:px-[10%]">
       {/* Background Image Optimized */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -54,7 +54,7 @@ export function SlideContent({ slide, isActive }: SlideContentProps) {
         variants={containerVariants}
         initial="hidden"
         animate={isActive ? "visible" : "hidden"}
-        className="relative z-10 max-w-3xl pt-20"
+        className="relative z-10 max-w-4xl xl:max-w-5xl 2xl:max-w-7xl pt-20"
       >
         {slide.tagline && (
           <motion.span
@@ -67,7 +67,7 @@ export function SlideContent({ slide, isActive }: SlideContentProps) {
 
         <motion.h1
           variants={itemVariants}
-          className="text-6xl md:text-8xl lg:text-[7rem] font-sans font-extrabold text-white leading-[0.9] mb-8 select-none"
+          className="text-6xl md:text-8xl lg:text-[7rem] 2xl:text-[10rem] font-sans font-extrabold text-white leading-[0.9] mb-8 select-none"
         >
           {slide.title}
           <br />
@@ -76,7 +76,7 @@ export function SlideContent({ slide, isActive }: SlideContentProps) {
 
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed font-medium"
+          className="text-lg md:text-xl 2xl:text-2xl text-white/70 max-w-2xl 2xl:max-w-3xl mb-10 leading-relaxed font-medium"
         >
           {slide.description}
         </motion.p>

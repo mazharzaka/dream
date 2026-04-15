@@ -7,10 +7,10 @@ export const MOCK_HERO_SLIDES: HeroSlide[] = [
     title: 'UNREAL',
     titleAccent: 'ADVENTURE',
     description: "Experience the world's most advanced 3D amusement park. Cinematic rides, heart-pumping thrills, and unforgettable memories.",
-    image: '/dream.jpg', // A rollercoaster/park image
+    image: '/dream.png', // A rollercoaster/park image
     buttons: [
-      { label: 'M', href: '/magic', variant: 'primary' },
-      { label: 'P', href: '/portal', variant: 'secondary' }
+      { label: 'dream', href: '/magic', variant: 'primary' },
+      { label: 'park', href: '/portal', variant: 'secondary' }
     ]
   },
   {
@@ -19,7 +19,7 @@ export const MOCK_HERO_SLIDES: HeroSlide[] = [
     title: 'DREAM',
     titleAccent: 'SAFARI',
     description: 'Explore the wonders of nature with our immersive zoo experience. Meet rare species in their curated habitats.',
-    image: '/dream.jpg', // A nature/safari image
+    image: '/Dream_park_4.jpg', // A nature/safari image
     buttons: [
       { label: 'M', href: '/magic', variant: 'primary' },
       { label: 'S', href: '/safari', variant: 'secondary' }
