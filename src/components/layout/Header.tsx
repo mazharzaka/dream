@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { EditorialButton } from '../ui/EditorialButton';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export function Header() {
   const navLinks = [
@@ -13,12 +14,15 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
-      <nav className="glassmorphism rounded-full bg-white px-8 py-3 flex items-center justify-between shadow-ambient border border-white/20">
+    <header className="fixed  left-1/2 -translate-x-1/2 z-50 w-full ">
+      <nav className="glassmorphism  bg-white px-6 py-3 flex items-center justify-between shadow-ambient border border-white/20">
         {/* Logo */}
-        <Link href="/" className="text-secondary text-2xl font-black italic tracking-tighter hover:opacity-80 transition-opacity">
-          Dream Park
-        </Link>
+        <div className="flex items-center">
+          <Image src="/logoDream.png" alt="Logo" width={80} height={80} />
+          <Link href="/" className="text-secondary text-xl md:block pt-2 font-black italic tracking-tighter hover:opacity-80 transition-opacity">
+            <span className='text-primary'> Dream</span> Park
+          </Link>
+        </div>
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-10">

@@ -17,7 +17,7 @@ export function HeroSlider() {
 
   if (isLoading) {
     return (
-      <div className="w-full h-screen bg-surface flex items-center justify-center">
+      <div className="w-full h-screen mt-[106px] bg-surface flex items-center justify-center">
         <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin" />
       </div>
     );
@@ -29,10 +29,10 @@ export function HeroSlider() {
         modules={[Autoplay, Navigation, Pagination, EffectFade]}
         effect="fade"
         speed={1000}
-        // autoplay={{
-        //   delay: 6000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+        }}
         loop={true}
         pagination={{
           clickable: true,
@@ -55,10 +55,10 @@ export function HeroSlider() {
       </Swiper>
 
       {/* Navigation Buttons */}
-      <button className="slider-nav-btn slider-nav-prev">
+      <button className="slider-nav-btn hidden md:block flex items-center justify-center slider-nav-prev">
         <ChevronLeft size={24} />
       </button>
-      <button className="slider-nav-btn slider-nav-next">
+      <button className="slider-nav-btn hidden md:block flex items-center justify-center slider-nav-next">
         <ChevronRight size={24} />
       </button>
     </section>
