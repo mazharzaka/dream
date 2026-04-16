@@ -12,8 +12,12 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import '../styles/slider.css';
 
+import { useLocale } from 'next-intl';
+
 export function HeroSlider() {
   const { slides, isLoading } = useHeroData();
+  const locale = useLocale();
+  const isRtl = locale === 'ar';
 
   if (isLoading) {
     return (
@@ -26,8 +30,10 @@ export function HeroSlider() {
   return (
     <section className="relative w-full h-screen overflow-hidden group">
       <Swiper
+        key={locale} // Re-mount swiper on locale change to ensure RTL mode resets correctly
         modules={[Autoplay, Navigation, Pagination, EffectFade]}
         effect="fade"
+        dir={isRtl ? 'rtl' : 'ltr'}
         speed={1000}
         autoplay={{
           delay: 6000,
@@ -54,12 +60,12 @@ export function HeroSlider() {
         ))}
       </Swiper>
 
-      {/* Navigation Buttons */}
-      <button className="slider-nav-btn hidden md:block flex items-center justify-center slider-nav-prev">
-        <ChevronLeft size={24} />
+      {/* Navigation Buttons - Flipped for RTL */}
+      <button className={`slider-nav-btn hidden md:flex items-center justify-center slider-nav-prev ${isRtl ? 'right-4' : 'left-4'}`}>
+        {isRtl ? <ChevronRight size={24} /> : <ChevronLeft size={24} />}
       </button>
-      <button className="slider-nav-btn hidden md:block flex items-center justify-center slider-nav-next">
-        <ChevronRight size={24} />
+      <button className={`slider-nav-btn hidden md:flex items-center justify-center slider-nav-next ${isRtl ? 'left-4' : 'right-4'}`}>
+        {isRtl ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
       </button>
     </section>
   );

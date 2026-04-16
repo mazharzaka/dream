@@ -1,21 +1,25 @@
 'use client';
 
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/src/i18n/routing';
 import { EditorialButton } from '../ui/EditorialButton';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export function Header() {
+  const t = useTranslations('Navigation');
+  const tActions = useTranslations('Actions');
+
   const navLinks = [
-    { label: 'Park Info', href: '#', active: true },
-    { label: 'Attractions', href: '#' },
-    { label: 'Dining', href: '#' },
-    { label: 'Map', href: '#' },
+    { label: t('parkInfo'), href: '/park-info', active: true },
+    { label: t('attractions'), href: '/attractions' },
+    { label: t('dining'), href: '/dining' },
+    { label: t('map'), href: '/map' },
   ];
 
   return (
-    <header className="fixed  left-1/2 -translate-x-1/2 z-50 w-full ">
-      <nav className="glassmorphism  bg-white px-6 py-3 flex items-center justify-between shadow-ambient border border-white/20">
+    <header className="fixed left-1/2 -translate-x-1/2 z-50 w-full">
+      <nav className="glassmorphism bg-white px-6 py-3 flex items-center justify-between shadow-ambient border border-white/20">
         {/* Logo */}
         <div className="flex items-center">
           <Image src="/logoDream.png" alt="Logo" width={80} height={80} />
@@ -37,7 +41,7 @@ export function Header() {
               {link.active && (
                 <motion.div
                   layoutId="header-active-link"
-                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary"
+                  className="absolute -bottom-1 inset-x-0 h-0.5 bg-primary"
                   transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                 />
               )}
@@ -47,7 +51,7 @@ export function Header() {
 
         {/* CTA Button */}
         <EditorialButton variant="primary" className="!px-6 !py-3 !min-h-0 !min-w-0 !text-xs">
-          Book Now
+          {tActions('bookNow')}
         </EditorialButton>
       </nav>
     </header>

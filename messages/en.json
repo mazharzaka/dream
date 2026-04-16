@@ -1,0 +1,18 @@
+{
+  "Navigation": {
+    "parkInfo": "Park Info",
+    "attractions": "Attractions",
+    "dining": "Dining",
+    "map": "Map"
+  },
+  "Actions": {
+    "bookNow": "Book Now"
+  },
+  "Hero": {
+    "games": "Games"
+  },
+  "Attractions": {
+    "title": "Our <span>Games</span>",
+    "openStatus": "Open Today: 9AM - 11PM"
+  }
+}
