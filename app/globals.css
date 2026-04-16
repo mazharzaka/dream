@@ -13,6 +13,8 @@
   --color-emerald: #10b981;
 
   --font-sans: var(--font-plus-jakarta-sans);
+  --font-arabic: var(--font-ibm-plex-arabic);
+  --font-cairo: var(--font-cairo);
 
   --shadow-ambient: 0 20px 40px 0 rgba(45, 47, 47, 0.05);
 
@@ -28,4 +30,16 @@ body {
   background-color: var(--color-surface);
   color: var(--color-on-surface);
   font-family: var(--font-sans), sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-arabic), sans-serif;
+}
+
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3 {
+  font-family: var(--font-cairo), sans-serif;
+  line-height: 1.3;
 }

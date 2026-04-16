@@ -8,9 +8,14 @@ interface SlideContentProps {
   isActive: boolean;
 }
 
+import { useLocale } from 'next-intl';
+
 export function SlideContent({ slide, isActive }: SlideContentProps) {
+  const locale = useLocale();
+  const isRtl = locale === 'ar';
+
   const containerVariants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0, x: isRtl ? 20 : -20 },
     visible: {
       opacity: 1,
       x: 0,
@@ -34,7 +39,7 @@ export function SlideContent({ slide, isActive }: SlideContentProps) {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-start text-left px-8 md:px-24 lg:px-32 2xl:px-[10%]">
+    <div className="relative w-full h-full flex items-center justify-start text-start ps-8 md:ps-24 lg:ps-32 2xl:ps-[10%]">
       {/* Background Image Optimized */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -45,8 +50,10 @@ export function SlideContent({ slide, isActive }: SlideContentProps) {
           className={`object-cover transition-transform duration-[10000ms] ${isActive ? 'scale-100' : 'scale-110'}`}
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
+        {/* Gradient mirrored for RTL */}
+        <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80 lg:bg-gradient-to-${isRtl ? 'l' : 'r'} lg:from-black/80 lg:via-black/30 lg:to-transparent`} />
+        {/* Top/Bottom editorial gradients */}
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/60 to-transparent" />
       </div>
 
       {/* Content shifted off-center for "Layout Energy" */}
@@ -67,7 +74,7 @@ export function SlideContent({ slide, isActive }: SlideContentProps) {
 
         <motion.h1
           variants={itemVariants}
-          className="text-6xl md:text-8xl lg:text-[7rem] 2xl:text-[10rem] font-sans font-extrabold text-white leading-[0.9] mb-8 select-none"
+          className={`text-6xl md:text-8xl lg:text-[7rem] 2xl:text-[10rem] font-bold text-white leading-[0.9] mb-8 select-none ${isRtl ? 'font-cairo' : 'font-sans'}`}
         >
           {slide.title}
           <br />

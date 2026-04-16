@@ -1,0 +1,18 @@
+{
+  "Navigation": {
+    "parkInfo": "معلومات الحديقة",
+    "attractions": "عوامل الجذب",
+    "dining": "المطاعم",
+    "map": "الخريطة"
+  },
+  "Actions": {
+    "bookNow": "احجز الآن"
+  },
+  "Hero": {
+    "games": "ألعابنا"
+  },
+  "Attractions": {
+    "title": "ألعابنا <span>المثيرة</span>",
+    "openStatus": "مفتوح اليوم: ٩ صباحاً - ١١ مساءً"
+  }
+}
