@@ -36,3 +36,19 @@ export interface Attraction {
     customStyle?: 'crimson' | 'sky' | 'nebula' | 'amazon' | 'phoenix' | 'midas';
   };
 }
+
+export interface ZooFeature {
+  id: string;
+  icon: string; // Lucide icon name
+  titleKey: string;
+  descriptionKey: string;
+}
+
+export interface ZooPin {
+  id: string;
+  labelKey: string;
+  top: number; // percentage
+  left: number; // percentage
+  icon: string; // Lucide icon name
+  variant: 'primary' | 'secondary' | 'accent';
+}

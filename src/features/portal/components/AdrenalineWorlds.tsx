@@ -1,9 +1,10 @@
 'use client';
 
-import { Calendar, Clock, Droplet, Rocket } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, Clock, Droplet, Rocket } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { MOCK_ATTRACTIONS } from '../data/mockAttractions';
 import { Attraction } from '../types';
+import Link from 'next/link';
 
 function renderAttractionCard(attr: Attraction, locale: string) {
   const isRtl = locale === 'ar';
@@ -142,22 +143,30 @@ export function AdrenalineWorlds() {
   return (
     <section className="bg-white py-16 px-4 md:px-8 relative">
       <div className="max-w-7xl mx-auto pt-8">
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 gap-x-12 gap-y-6">
-          <div className="max-w-3xl">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-1 gap-x-12 gap-y-6">
+          <div className=" flex  justify-between w-full">
             <h2 className={`text-5xl md:text-6xl text-start font-black text-primary tracking-tight mb-4 antialiased ${locale === 'ar' ? 'font-cairo' : 'font-sans'}`}>
               {t.rich('title', {
                 span: (chunks) => <span className="text-secondary italic font-bold">{chunks}</span>
               })}
             </h2>
-          </div>
-          <div className="shrink-0 flex items-center lg:self-end self-start">
             <button className="flex items-center gap-2 bg-[#e9f0f6] text-[#2d5f8b] px-4 py-2.5 rounded-full text-xs font-bold hover:bg-[#d4e1ee] transition-colors uppercase tracking-wide">
               <Calendar className="w-3.5 h-3.5" />
               {t('openStatus')}
             </button>
           </div>
-        </div>
 
+        </div>
+        <div className="shrink-0 flex items-center mb-10  justify-end w-full lg:self-end self-start">
+          <Link
+            href="/attractions"
+            className="flex items-center gap-2  text-primary hover:text-primary/80 text-xs font-bold  transition-colors uppercase tracking-wide"
+          >
+            {t('viewAll')}
+            {locale === 'ar' ? <ArrowLeft className="w-3.5 h-3.5 text-primary" /> : <ArrowRight className="w-3.5 h-3.5 text-primary" />
+            }
+          </Link>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4">
           {MOCK_ATTRACTIONS.map((attr) => renderAttractionCard(attr, locale))}
         </div>

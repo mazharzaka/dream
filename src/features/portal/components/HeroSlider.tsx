@@ -61,11 +61,11 @@ export function HeroSlider() {
       </Swiper>
 
       {/* Navigation Buttons - Flipped for RTL */}
-      <button className={`slider-nav-btn hidden md:flex items-center justify-center slider-nav-prev ${isRtl ? 'right-4' : 'left-4'}`}>
-        {isRtl ? <ChevronRight size={24} /> : <ChevronLeft size={24} />}
+      <button className={`slider-nav-btn hidden md:flex items-center justify-center slider-nav-prev`}>
+        <ChevronLeft size={24} />
       </button>
-      <button className={`slider-nav-btn hidden md:flex items-center justify-center slider-nav-next ${isRtl ? 'left-4' : 'right-4'}`}>
-        {isRtl ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
+      <button className={`slider-nav-btn hidden md:flex items-center justify-center slider-nav-next`}>
+        <ChevronRight size={24} />
       </button>
     </section>
   );
