@@ -1,6 +1,8 @@
 import { HeroSlider } from "./HeroSlider";
 import { Header } from "@/src/components/layout/Header";
 import { AdrenalineWorlds } from "./AdrenalineWorlds";
+import { DreamZoo } from "./DreamZoo";
+import { MapContainer } from "../../explore";
 
 export function HeroPortal() {
   return (
@@ -10,6 +12,8 @@ export function HeroPortal() {
         <HeroSlider />
       </div>
       <AdrenalineWorlds />
+      <DreamZoo />
+      <MapContainer />
     </div>
   );
 }

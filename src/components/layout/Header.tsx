@@ -5,6 +5,7 @@ import { Link } from '@/src/i18n/routing';
 import { EditorialButton } from '../ui/EditorialButton';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import LanguageSwitcher from '../ui/LanguageSwitcher';
 
 export function Header() {
   const t = useTranslations('Navigation');
@@ -23,7 +24,7 @@ export function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <Image src="/logoDream.png" alt="Logo" width={80} height={80} />
-          <Link href="/" className="text-secondary text-xl md:block pt-2 font-black italic tracking-tighter hover:opacity-80 transition-opacity">
+          <Link href="/" className="text-secondary text-xl md:block hidden pt-2 font-black italic tracking-tighter hover:opacity-80 transition-opacity">
             <span className='text-primary'> Dream</span> Park
           </Link>
         </div>
@@ -50,9 +51,14 @@ export function Header() {
         </div>
 
         {/* CTA Button */}
-        <EditorialButton variant="primary" className="!px-6 !py-3 !min-h-0 !min-w-0 !text-xs">
-          {tActions('bookNow')}
-        </EditorialButton>
+        <div className="flex items-center flex-col  md:flex-row md:gap-3 gap-1">
+          <EditorialButton variant="primary" className="!px-3 !py-1 md:!px-6 md:!py-3 !min-h-0 !min-w-0  md:!text-xs !text-xxs">
+            {tActions('bookNow')}
+          </EditorialButton>
+          <LanguageSwitcher />
+        </div>
+
+
       </nav>
     </header>
   );

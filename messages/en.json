@@ -13,6 +13,42 @@
   },
   "Attractions": {
     "title": "Our <span>Games</span>",
-    "openStatus": "Open Today: 9AM - 11PM"
+    "openStatus": "Open Today: 9AM - 11PM",
+    "viewAll": "View All"
+  },
+  "DreamZoo": {
+    "title": "Dream <span>Zoo</span>",
+    "description": "Embark on a journey through nature's most extraordinary habitats.",
+    "cta": "Explore Wildlife",
+    "features": {
+      "safari": {
+        "title": "Safari Experience",
+        "description": "Get close to majestic animals in their natural habitats."
+      },
+      "conservation": {
+        "title": "Conservation Heart",
+        "description": "Learn about our efforts to protect endangered species."
+      },
+      "interactive": {
+        "title": "Wild Encounters",
+        "description": "Interactive sessions with our resident animals."
+      }
+    },
+    "zones": {
+      "lion": "King's Pride (Lion)",
+      "giraffe": "Skyline Heights (Giraffe)",
+      "elephant": "Gentle Giants (Elephant)"
+    }
+  },
+  "Explore": {
+    "title": "Park <span>Explorer</span>",
+    "description": "Navigate your way through the magic of Dream Park.",
+    "cta": "View Details",
+    "categories": {
+      "Rides": "Rides",
+      "Zoo": "Zoo",
+      "Water": "Water",
+      "Facilities": "Facilities"
+    }
   }
 }

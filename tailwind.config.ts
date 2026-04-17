@@ -25,6 +25,7 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-plus-jakarta-sans)"], // Next/Font integration
+        cairo: ["var(--font-cairo)"],
       },
       boxShadow: {
         // 40px blur, 5% opacity, #2d2f2f
