@@ -50,5 +50,44 @@
       "Water": "Water",
       "Facilities": "Facilities"
     }
+  },
+  "Tickets": {
+    "step01": "Select Pass 01",
+    "step02": "Choose Time 02",
+    "step03": "Add-ons 03",
+    "mostPopular": "Most Popular",
+    "person": "person",
+    "tiers": {
+      "diamond": {
+        "name": "Diamond",
+        "edition": "Diamond Edition",
+        "cta": "Select Diamond",
+        "features": {
+          "magicPass": "Unlimited Magic Pass",
+          "lounge": "VIP Lounge Access",
+          "discount": "Merch & Dining Off 25%"
+        }
+      },
+      "gold": {
+        "name": "Gold",
+        "edition": "Gold Edition",
+        "cta": "Select Gold",
+        "features": {
+          "fastTrack": "Fast-Track for 5 Rides",
+          "parking": "Premium Parking Included",
+          "discount": "Dining Discount 10%"
+        }
+      },
+      "silver": {
+        "name": "Silver",
+        "edition": "Silver Edition",
+        "cta": "Select Silver",
+        "features": {
+          "access": "All Theme Park Access",
+          "parking": "Standard Parking",
+          "magicPass": "Magic Pass Access"
+        }
+      }
+    }
   }
 }

@@ -3,6 +3,7 @@ import { Header } from "@/src/components/layout/Header";
 import { AdrenalineWorlds } from "./AdrenalineWorlds";
 import { DreamZoo } from "./DreamZoo";
 import { MapContainer } from "../../explore";
+import { TicketsSection } from "../../tickets";
 
 export function HeroPortal() {
   return (
@@ -14,6 +15,7 @@ export function HeroPortal() {
       <AdrenalineWorlds />
       <DreamZoo />
       <MapContainer />
+      <TicketsSection />
     </div>
   );
 }
