@@ -44,58 +44,27 @@ export function TicketsSection() {
         <StepIndicator />
 
         {/* Desktop Grid */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="hidden md:flex justify-center items-center gap-6"
+          className="grid md:grid-cols-3 gap-6"
         >
           {TICKET_TIERS.map((tier) => (
             <motion.div key={tier.id} variants={itemVariants}>
-              <PassCard 
-                tier={tier} 
-                onSelect={handleSelect} 
-                isRtl={isRtl} 
+              <PassCard
+                tier={tier}
+                onSelect={handleSelect}
+                isRtl={isRtl}
               />
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden">
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1.2}
-            centeredSlides={true}
-            pagination={{ clickable: true }}
-            className="tickets-swiper pb-12"
-          >
-            {TICKET_TIERS.map((tier) => (
-              <SwiperSlide key={tier.id} className="flex justify-center">
-                <PassCard 
-                  tier={tier} 
-                  onSelect={handleSelect} 
-                  isRtl={isRtl} 
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+
       </div>
 
-      <style jsx global>{`
-        .tickets-swiper .swiper-pagination-bullet {
-          background: var(--color-primary);
-          opacity: 0.2;
-        }
-        .tickets-swiper .swiper-pagination-bullet-active {
-          opacity: 1;
-          width: 24px;
-          border-radius: 4px;
-        }
-      `}</style>
     </section>
   );
 }

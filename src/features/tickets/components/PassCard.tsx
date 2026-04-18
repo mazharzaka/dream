@@ -24,7 +24,7 @@ export function PassCard({ tier, onSelect, isRtl }: PassCardProps) {
   return (
     <motion.div
       whileHover={{ y: -10 }}
-      className={`relative w-full max-w-[380px] rounded-[40px] p-10 flex flex-col items-center bg-white shadow-ambient border-2 border-transparent transition-all duration-300 hover:border-primary/10 overflow-hidden ${tier.isPopular ? 'scale-105 z-10' : ''}`}
+      className={`relative w-full max-w-[480px] rounded-[40px] p-10 flex flex-col items-center bg-white shadow-ambient border-2 border-transparent transition-all duration-300 hover:border-primary/10 overflow-hidden ${tier.isPopular ? 'scale-105 z-10' : ''}`}
     >
       {/* Most Popular Badge */}
       {tier.isPopular && (
@@ -35,13 +35,13 @@ export function PassCard({ tier, onSelect, isRtl }: PassCardProps) {
 
       {/* Header Icon & Label */}
       <div className="w-full flex justify-between items-start mb-10">
-        <div 
+        <div
           className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg"
           style={{ backgroundColor: tier.color, color: 'white' }}
         >
           <Icon size={28} />
         </div>
-        <span 
+        <span
           className="px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-60"
           style={{ backgroundColor: `${tier.color}15`, color: tier.color }}
         >
@@ -64,7 +64,7 @@ export function PassCard({ tier, onSelect, isRtl }: PassCardProps) {
       <div className="w-full space-y-5 mb-12">
         {tier.features.map((featureKey, index) => (
           <div key={index} className={`flex items-center gap-3 ${isRtl ? 'flex-row-reverse text-right' : ''}`}>
-            <div 
+            <div
               className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
               style={{ backgroundColor: tier.color, color: 'white' }}
             >
