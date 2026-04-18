@@ -38,3 +38,12 @@ export const MOCK_HERO_SLIDES: HeroSlide[] = [
     ]
   }
 ];
+export const ZooHero: HeroSlide = {
+  id: '1',
+  title: 'UNREAL',
+  description: "Experience the world's most advanced 3D amusement park. Cinematic rides, heart-pumping thrills, and unforgettable memories.",
+  image: '/lion1.png', // A rollercoaster/park image
+  buttons: [
+    { label: 'View our Champion', href: '/magic', variant: 'primary' },
+  ]
+}

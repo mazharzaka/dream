@@ -2,7 +2,6 @@
 
 import { ArrowLeft, ArrowRight, Calendar, Clock, Droplet, Rocket } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
-import { MOCK_ATTRACTIONS } from '../data/mockAttractions';
 import { Attraction } from '../types';
 import Link from 'next/link';
 
@@ -136,8 +135,8 @@ function renderAttractionCard(attr: Attraction, locale: string) {
   );
 }
 
-export function AdrenalineWorlds() {
-  const t = useTranslations('Attractions');
+export function AdrenalineWorlds({ attractions, title }: { attractions?: Attraction[], title: string }) {
+  const t = useTranslations(title);
   const locale = useLocale();
 
   return (
@@ -146,7 +145,9 @@ export function AdrenalineWorlds() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-1 gap-x-12 gap-y-6">
           <div className=" flex  justify-between w-full">
             <h2 className={`text-5xl md:text-6xl text-start font-black text-primary tracking-tight mb-4 antialiased ${locale === 'ar' ? 'font-cairo' : 'font-sans'}`}>
-              {t.rich('title', {
+              {title === "DreamZoo" ? t.rich('animals', {
+                span: (chunks) => <span className="text-secondary italic font-bold">{chunks}</span>
+              }) : t.rich('title', {
                 span: (chunks) => <span className="text-secondary italic font-bold">{chunks}</span>
               })}
             </h2>
@@ -168,7 +169,7 @@ export function AdrenalineWorlds() {
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4">
-          {MOCK_ATTRACTIONS.map((attr) => renderAttractionCard(attr, locale))}
+          {attractions?.map((attr) => renderAttractionCard(attr, locale))}
         </div>
       </div>
     </section>

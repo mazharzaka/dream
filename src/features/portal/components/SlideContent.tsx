@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { HeroSlide } from '../types';
 import { EditorialButton } from '@/src/components/ui/EditorialButton';

@@ -18,8 +18,11 @@
   },
   "DreamZoo": {
     "title": "Dream <span>Zoo</span>",
+    "animals": "Our <span>Animals</span>",
     "description": "Embark on a journey through nature's most extraordinary habitats.",
     "cta": "Explore Wildlife",
+    "openStatus": "Open Today: 9AM - 11PM",
+    "viewAll": "View All",
     "features": {
       "safari": {
         "title": "Safari Experience",
