@@ -3,7 +3,7 @@
 import { ArrowLeft, ArrowRight, Calendar, Clock, Droplet, Rocket } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Attraction } from '../types';
-import Link from 'next/link';
+import { Link } from '@/src/i18n/routing';
 
 function renderAttractionCard(attr: Attraction, locale: string) {
   const isRtl = locale === 'ar';
@@ -140,7 +140,7 @@ export function AdrenalineWorlds({ attractions, title }: { attractions?: Attract
   const locale = useLocale();
 
   return (
-    <section className="bg-white py-16 px-4 md:px-8 relative">
+    <section className="bg-white py-3 px-4 md:px-8 relative">
       <div className="max-w-7xl mx-auto pt-8">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-1 gap-x-12 gap-y-6">
           <div className=" flex  justify-between w-full">
@@ -168,7 +168,7 @@ export function AdrenalineWorlds({ attractions, title }: { attractions?: Attract
             }
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4">
+        <div className={`grid grid-cols-1 md:grid-cols-4 ${title === "DreamZoo" ? "md:grid-rows-2" : "md:grid-rows-3"} gap-4`}>
           {attractions?.map((attr) => renderAttractionCard(attr, locale))}
         </div>
       </div>

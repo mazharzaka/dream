@@ -10,7 +10,7 @@ export const routing = defineRouting({
 
   localePrefix: 'always',
 
-  localeDetection: false,
+  localeDetection: true,
 });
 
 // Lightweight wrappers around Next.js' navigation APIs

@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode } from 'swiper/modules';
 import { Camera, Heart, Info, Sun, Trees, BookOpen, MapPin } from 'lucide-react';
 import { ZOO_FEATURES, ZOO_PINS } from '../data/zooData';
-import Link from 'next/link';
+import { Link } from '@/src/i18n/routing';
 
 // Import swiper styles
 import 'swiper/css';

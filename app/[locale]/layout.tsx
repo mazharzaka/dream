@@ -5,6 +5,8 @@ import { routing } from "@/src/i18n/routing";
 import { Geist, Geist_Mono, IBM_Plex_Sans_Arabic, Cairo, Plus_Jakarta_Sans } from "next/font/google";
 import "../globals.css";
 import { Header } from "@/src/components/layout/Header";
+import LocalePersistence from "@/src/components/ui/LocalePersistence";
+
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -61,6 +63,7 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
+          <LocalePersistence />
           <Header />
 
           {children}

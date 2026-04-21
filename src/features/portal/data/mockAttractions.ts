@@ -137,3 +137,4 @@ export const MOCK_ANIMALS: Attraction[] = [
   },
 
 ];
+

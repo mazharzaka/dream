@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { Rocket, Camera, Waves, Star, X, MapPin } from 'lucide-react';
 import { MAP_LOCATIONS, MapLocation } from '../lib/map-data';
-import Link from 'next/link';
+import { Link } from '@/src/i18n/routing';
 
 const ICON_MAP: Record<string, any> = {
   Rocket,
