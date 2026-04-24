@@ -1,7 +1,7 @@
 export interface HeroAction {
   label: string;
   href: string;
-  variant: 'primary' | 'secondary';
+  variant: "primary" | "secondary";
 }
 
 export interface HeroSlide {
@@ -16,8 +16,17 @@ export interface HeroSlide {
 
 export interface AttractionTag {
   label: string;
-  variant?: 'white' | 'dark' | 'outline' | 'green';
+  variant?: "white" | "dark" | "outline" | "green";
 }
+export type ticketsetType = {
+  id: string;
+  title: string;
+  image: string;
+  layout: {
+    colSpan: number;
+    rowSpan: number;
+  };
+};
 
 export interface Attraction {
   id: string;
@@ -33,7 +42,7 @@ export interface Attraction {
   layout: {
     colSpan: number;
     rowSpan: number;
-    customStyle?: 'crimson' | 'sky' | 'nebula' | 'amazon' | 'phoenix' | 'midas';
+    customStyle?: "crimson" | "sky" | "nebula" | "amazon" | "phoenix" | "midas";
   };
 }
 
@@ -50,5 +59,5 @@ export interface ZooPin {
   top: number; // percentage
   left: number; // percentage
   icon: string; // Lucide icon name
-  variant: 'primary' | 'secondary' | 'accent';
+  variant: "primary" | "secondary" | "accent";
 }
