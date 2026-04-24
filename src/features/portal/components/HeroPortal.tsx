@@ -6,7 +6,12 @@ import { MapContainer } from "../../explore";
 import { TicketsSection } from "../../tickets";
 import { MOCK_ATTRACTIONS, MOCK_TICKETSETS } from "../data/mockAttractions";
 import { MOCK_DOBY } from "../data/mockHeroes";
+<<<<<<< HEAD
 import { Ticketsets } from "./Ticketsets";
+=======
+import Merch from "./Merch";
+
+>>>>>>> e872449acc639af97de1aabda79fe0cba44a5f97
 
 export function HeroPortal() {
   return (
@@ -17,6 +22,7 @@ export function HeroPortal() {
       <AdrenalineWorlds title="Attractions" attractions={MOCK_ATTRACTIONS} />
       <DreamZoo />
       <OurHeroesSlider mockHeroes={MOCK_DOBY} title="Dopy" />
+      <Merch />
       <MapContainer />
       <Ticketsets title="Ticketsets" attractions={MOCK_TICKETSETS} />
       <TicketsSection />

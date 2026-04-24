@@ -135,7 +135,7 @@ function renderAttractionCard(attr: Attraction, locale: string) {
   );
 }
 
-export function AdrenalineWorlds({ attractions, title }: { attractions?: Attraction[], title: string }) {
+export function AdrenalineWorlds({ attractions, title, link = "games" }: { attractions?: Attraction[], title: string, link?: string }) {
   const t = useTranslations(title);
   const locale = useLocale();
 
@@ -160,7 +160,7 @@ export function AdrenalineWorlds({ attractions, title }: { attractions?: Attract
         </div>
         <div className="shrink-0 flex items-center mb-10  justify-end w-full lg:self-end self-start">
           <Link
-            href="/attractions"
+            href={`/${link}`}
             className="flex items-center gap-2  text-primary hover:text-primary/80 text-xs font-bold  transition-colors uppercase tracking-wide"
           >
             {t('viewAll')}

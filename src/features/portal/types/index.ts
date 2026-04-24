@@ -27,7 +27,12 @@ export type ticketsetType = {
     rowSpan: number;
   };
 };
-
+export interface Product {
+  id: string;
+  title: string;
+  image: string;
+  price: number;
+}
 export interface Attraction {
   id: string;
   title: string;
