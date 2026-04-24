@@ -18,7 +18,13 @@ export interface AttractionTag {
   label: string;
   variant?: 'white' | 'dark' | 'outline' | 'green';
 }
+export interface Product {
+  id: string;
+  title: string;
+  image: string;
+  price: number;
 
+}
 export interface Attraction {
   id: string;
   title: string;

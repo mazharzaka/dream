@@ -1,3 +1,4 @@
+import { Product } from '../../portal/types';
 import { Category, Game } from '../types';
 
 export const CATEGORIES: Category[] = [
@@ -53,3 +54,30 @@ export const MOCK_GAMES: Game[] = [
 ];
 
 
+export const mockMerch: Product[] = [
+  {
+    id: 'merch-1',
+    title: "t-shirt",
+    image: '/products/product1.png', // Reusing some existing mock images
+    price: 10,
+  },
+  {
+    id: 'merch-2',
+    title: "cap",
+    image: '/products/product2.png',
+    price: 15,
+  },
+  {
+    id: 'merch-3',
+    title: "mug",
+    image: '/products/product3.png',
+    price: 15,
+  },
+  {
+    id: 'merch-4',
+    title: "keychain",
+    image: '/products/product4.png',
+    price: 15,
+  },
+
+]

@@ -6,6 +6,8 @@ import { MapContainer } from "../../explore";
 import { TicketsSection } from "../../tickets";
 import { MOCK_ATTRACTIONS } from "../data/mockAttractions";
 import { MOCK_DOBY } from "../data/mockHeroes";
+import Merch from "./Merch";
+
 
 export function HeroPortal() {
   return (
@@ -16,6 +18,7 @@ export function HeroPortal() {
       <AdrenalineWorlds title='Attractions' attractions={MOCK_ATTRACTIONS} />
       <DreamZoo />
       <OurHeroesSlider mockHeroes={MOCK_DOBY} title="Dopy" />
+      <Merch />
       <MapContainer />
       <TicketsSection />
     </div>

@@ -13,7 +13,7 @@ function ZooPage() {
                 <SlideContent slide={ZooHero} isActive={true} />
             </div>
             <div >
-                <AdrenalineWorlds title="DreamZoo" attractions={MOCK_ANIMALS} />
+                <AdrenalineWorlds title="DreamZoo" link='zoo/animals' attractions={MOCK_ANIMALS} />
 
             </div>
             <OurHeroesSlider mockHeroes={MOCK_HEROES} title="Portal.OurHeroes" />
